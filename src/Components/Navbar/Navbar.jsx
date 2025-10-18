@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { RiMenu3Fill, RiCloseLine } from "react-icons/ri";
+import { MdArrowDropDown, MdOutlineArrowDropUp } from "react-icons/md";
 import { navLinks, navAssets } from "../Constant/Constant";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   return (
     <nav className="relative mx-3 xl:mx-auto xl:max-w-[1200px] 2xl:max-w-[1400px] z-50">
@@ -19,13 +21,49 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex gap-6">
+        <ul className="hidden md:flex gap-6 relative">
           {navLinks.map((link, index) => (
-            <li
-              key={index}
-              className="text-gray-700 hover:text-black cursor-pointer font-medium"
-            >
-              {link.title}
+            <li key={index} className="relative group cursor-pointer">
+              <div
+                className={`flex items-center gap-1 font-medium transition-colors ${
+                  link.title === "Home"
+                    ? "text-[#D88946]" // Home is orange
+                    : "text-gray-700 hover:text-[#D88946]" // Others gray by default, orange on hover
+                }`}
+              >
+                {link.title}
+                {link.dropdown && (
+                  <MdArrowDropDown className="text-2xl mt-[2px] transition-transform duration-500 group-hover:rotate-180" />
+                )}
+              </div>
+
+              {/* Desktop dropdown menu */}
+              {link.dropdown && (
+                <ul
+                  className="absolute left-0 top-10 bg-white shadow-lg rounded-lg overflow-hidden
+                  max-h-0 opacity-0 invisible
+                  group-hover:opacity-100 group-hover:visible group-hover:max-h-96
+                  transition-all duration-300 ease-out transform -translate-y-4 group-hover:translate-y-0 w-[300px]"
+                >
+                  {link.dropdown.map((item, i) => (
+                    <li
+                      key={i}
+                      className="px-4 py-2 text-gray-700 hover:text-[#D88946] transition-colors flex items-center gap-2 relative mt-3"
+                    >
+                      <img
+                        src={item.icon}
+                        alt={item.title}
+                        className="w-5 h-5"
+                      />
+                      {item.title}
+                      {/* Short bottom border */}
+                      {i !== link.dropdown.length - 1 && (
+                        <span className="absolute bottom-0 left-4 w-[calc(100%-1rem)] border-b border-gray-200"></span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>
@@ -55,24 +93,64 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Dropdown Menu */}
       <div
-        className={`md:hidden absolute left-0 w-full bg-white shadow-md transition-all duration-500 ease-in-out overflow-hidden ${
+        className={`md:hidden absolute left-0 w-full bg-white shadow-md overflow-hidden transition-all duration-500 ease-out ${
           isOpen
-            ? "max-h-96 opacity-100 rounded-b-xl border-t border-gray-200"
+            ? "max-h-[1000px] opacity-100 rounded-b-xl border-t border-gray-200"
             : "max-h-0 opacity-0 rounded-b-none"
         }`}
       >
-        <ul className="flex flex-col p-4 gap-4">
+        <ul className="flex flex-col p-4 gap-2">
           {navLinks.map((link, index) => (
             <li
               key={index}
-              className="text-gray-700 hover:text-black cursor-pointer font-medium"
-              onClick={() => setIsOpen(false)}
+              className="cursor-pointer text-gray-700 font-medium"
             >
-              {link.title}
+              <div
+                className="flex justify-between items-center py-2 hover:text-black"
+                onClick={() =>
+                  link.dropdown
+                    ? setMobileDropdownOpen(!mobileDropdownOpen)
+                    : setIsOpen(false)
+                }
+              >
+                {link.title}
+                {link.dropdown &&
+                  (mobileDropdownOpen ? (
+                    <MdOutlineArrowDropUp className="text-2xl" />
+                  ) : (
+                    <MdArrowDropDown className="text-2xl" />
+                  ))}
+              </div>
+
+              {/* Mobile dropdown items */}
+              {link.dropdown && (
+                <ul
+                  className={`pl-4 flex flex-col gap-1 overflow-hidden transition-all duration-500 ease-out ${
+                    mobileDropdownOpen ? "max-h-60" : "max-h-0"
+                  }`}
+                >
+                  {link.dropdown.map((item, i) => (
+                    <li
+                      key={i}
+                      className="py-1 text-gray-600 hover:text-black transition-colors flex items-center gap-2"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <img
+                        src={item.icon}
+                        alt={item.title}
+                        className="w-5 h-5"
+                      />
+                      {item.title}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
+
+          {/* Mobile Feedback */}
           <div className="flex items-center gap-2 justify-center bg-[#D88946] px-3 py-2 rounded-full mt-2">
             <span className="text-white font-medium">Feedback</span>
             <img
