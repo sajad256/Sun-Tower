@@ -1,14 +1,14 @@
 import React from "react";
-import { Navbar, Hero } from "./Components/index";
+import { Navbar, Hero, Discoverthelastestproject } from "./Components/index";
 
 export default function App() {
   return (
     <>
-      {/* <div>
-        <Navbar />
-      </div> */}
       <div>
         <Hero />
+      </div>
+      <div>
+        <Discoverthelastestproject />
       </div>
     </>
   );

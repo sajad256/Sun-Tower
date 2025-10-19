@@ -28,7 +28,7 @@ export default function Navbar() {
                 className={`flex items-center gap-1 font-medium transition-colors ${
                   link.title === "Home"
                     ? "text-[#D88946]" // Home is orange
-                    : "text-gray-700 hover:text-[#D88946]" // Others gray by default, orange on hover
+                    : "text-black hover:text-[#D88946]" // Others gray by default, orange on hover
                 }`}
               >
                 {link.title}
@@ -48,7 +48,7 @@ export default function Navbar() {
                   {link.dropdown.map((item, i) => (
                     <li
                       key={i}
-                      className="px-4 py-2 text-gray-700 hover:text-[#D88946] transition-colors flex items-center gap-2 relative mt-3"
+                      className="px-4 py-2 text-black hover:text-[#D88946] transition-colors flex items-center gap-2 relative mt-3"
                     >
                       <img
                         src={item.icon}
@@ -103,10 +103,7 @@ export default function Navbar() {
       >
         <ul className="flex flex-col p-4 gap-2">
           {navLinks.map((link, index) => (
-            <li
-              key={index}
-              className="cursor-pointer text-gray-700 font-medium"
-            >
+            <li key={index} className="cursor-pointer text-black font-medium">
               <div
                 className="flex justify-between items-center py-2 hover:text-black"
                 onClick={() =>
@@ -134,7 +131,7 @@ export default function Navbar() {
                   {link.dropdown.map((item, i) => (
                     <li
                       key={i}
-                      className="py-1 text-gray-600 hover:text-black transition-colors flex items-center gap-2"
+                      className="py-1 text-black hover:text-[#D88946] transition-colors flex items-center gap-2 border-b"
                       onClick={() => setIsOpen(false)}
                     >
                       <img
