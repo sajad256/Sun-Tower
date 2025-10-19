@@ -5,6 +5,11 @@ import {
   icon2,
   icon3,
   icon4,
+  firsttown,
+  secondtown,
+  thirdtown,
+  fourthtown,
+  fifthtown,
 } from "../../assets/Imges";
 
 export const navLinks = [
@@ -26,3 +31,31 @@ export const navAssets = {
   logo,
   feedbackImg,
 };
+
+export const latestProject = [
+  {
+    img: firsttown,
+    town: "Town House",
+    properties: "2 Properties",
+  },
+  {
+    img: secondtown,
+    town: "Town House",
+    properties: "2 Properties",
+  },
+  {
+    img: thirdtown,
+    town: "Town House",
+    properties: "2 Properties",
+  },
+  {
+    img: fourthtown,
+    town: "Town House",
+    properties: "2 Properties",
+  },
+  {
+    img: fifthtown,
+    town: "Town House",
+    properties: "2 Properties",
+  },
+];
