@@ -4,6 +4,9 @@ import { FaCar } from "react-icons/fa";
 import { TbRuler2 } from "react-icons/tb";
 import { IoCallOutline } from "react-icons/io5";
 import { FaWhatsapp } from "react-icons/fa";
+import { CiLocationOn } from "react-icons/ci";
+import { FaBed } from "react-icons/fa";
+import { GiWallet } from "react-icons/gi";
 
 import {
   logo,
@@ -18,6 +21,7 @@ import {
   fourthtown,
   fifthtown,
   villa,
+  heroImg,
 } from "../../assets/Imges";
 
 export const navLinks = [
@@ -272,5 +276,44 @@ export const trendingListings = [
     call: "Call",
     whatsappIcon: FaWhatsapp,
     whatsapp: "WhatsApp",
+  },
+];
+
+export const exclusiveProperties = [
+  {
+    img: villa,
+    title: "Villa One Hyde Park",
+    locationicon: CiLocationOn,
+    location: "125 Downtown St",
+    bedicon: FaBed,
+    bed: "4",
+    bathroomIcon: PiBathtubFill,
+    bathroom: "3",
+    walleticon: GiWallet,
+    wallet: "555",
+  },
+  {
+    img: fourthtown,
+    title: "Luxury Apartment",
+    locationicon: CiLocationOn,
+    location: "125 Downtown St",
+    bedicon: FaBed,
+    bed: "4",
+    bathroomIcon: PiBathtubFill,
+    bathroom: "3",
+    walleticon: GiWallet,
+    wallet: "650",
+  },
+  {
+    img: fifthtown,
+    title: "Modern House",
+    locationicon: CiLocationOn,
+    location: "125 Downtown St",
+    bedicon: FaBed,
+    bed: "1",
+    bathroomIcon: PiBathtubFill,
+    bathroom: "2",
+    walleticon: GiWallet,
+    wallet: "750",
   },
 ];

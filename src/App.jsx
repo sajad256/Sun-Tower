@@ -4,6 +4,7 @@ import {
   Hero,
   Discoverthelastestproject,
   TrendingListing,
+  Exclusiveproperties,
 } from "./Components/index";
 
 export default function App() {
@@ -17,6 +18,9 @@ export default function App() {
       </div>
       <div>
         <TrendingListing />
+      </div>
+      <div>
+        <Exclusiveproperties />
       </div>
     </>
   );
