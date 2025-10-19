@@ -10,6 +10,7 @@ import secondtown from "./second-town.png";
 import thirdtown from "./third-town.png";
 import fourthtown from "./fourth-town.png";
 import fifthtown from "./fifth-town.png";
+import villa from "./villa.png";
 
 export {
   logo,
@@ -24,4 +25,5 @@ export {
   thirdtown,
   fourthtown,
   fifthtown,
+  villa,
 };

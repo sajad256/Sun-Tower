@@ -1,5 +1,10 @@
 import React from "react";
-import { Navbar, Hero, Discoverthelastestproject } from "./Components/index";
+import {
+  Navbar,
+  Hero,
+  Discoverthelastestproject,
+  TrendingListing,
+} from "./Components/index";
 
 export default function App() {
   return (
@@ -9,6 +14,9 @@ export default function App() {
       </div>
       <div>
         <Discoverthelastestproject />
+      </div>
+      <div>
+        <TrendingListing />
       </div>
     </>
   );
