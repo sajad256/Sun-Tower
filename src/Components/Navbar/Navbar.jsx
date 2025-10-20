@@ -41,7 +41,7 @@ export default function Navbar() {
                 {/* Desktop dropdown menu */}
                 {link.dropdown && (
                   <ul
-                    className="absolute left-0 top-10 bg-white shadow-lg rounded-lg overflow-hidden
+                    className="absolute left-0 top-7   bg-white shadow-lg rounded-lg overflow-hidden
                 max-h-0 opacity-0 invisible
                 group-hover:opacity-100 group-hover:visible group-hover:max-h-96
                 transition-all duration-300 ease-out transform -translate-y-4 group-hover:translate-y-0 w-[300px]"
@@ -105,7 +105,7 @@ export default function Navbar() {
             {navLinks.map((link, index) => (
               <li key={index} className="cursor-pointer text-black font-medium">
                 <div
-                  className="flex justify-between items-center py-2 hover:text-black"
+                  className="flex justify-between items-center py-2 hover:text-black "
                   onClick={() =>
                     link.dropdown
                       ? setMobileDropdownOpen(!mobileDropdownOpen)
