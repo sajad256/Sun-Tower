@@ -4,7 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
-import { villa, firsttown, secondtown, thirdtown } from "../../assets/Imges";
+import { villa, secondtown, sofa, house, hall } from "../../assets/Imges";
 import { exclusiveProperties } from "../Constant/Constant";
 
 export default function ExclusiveProperties() {
@@ -16,7 +16,7 @@ export default function ExclusiveProperties() {
   const [mainSwiperReady, setMainSwiperReady] = useState(false);
   const [imgSwiperReady, setImgSwiperReady] = useState(false);
 
-  const rightImages = [firsttown, secondtown, thirdtown];
+  const rightImages = [hall, sofa, house];
 
   return (
     <section className="py-12 bg-white">
@@ -39,6 +39,7 @@ export default function ExclusiveProperties() {
                 modules={[Navigation]}
                 slidesPerView={1}
                 spaceBetween={20}
+                loop={Infinity}
                 navigation={{
                   prevEl: mainPrevRef.current,
                   nextEl: mainNextRef.current,
@@ -113,11 +114,12 @@ export default function ExclusiveProperties() {
           {/* RIGHT: Top Swiper + Bottom Flex */}
           <div className="flex flex-col gap-4 w-full">
             {/* Top Right Swiper */}
-            <div className="rounded-2xl overflow-hidden h-[260px] md:h-[270px] relative">
+            <div className="rounded-2xl overflow-hidden h-[190px] md:h-[260px] lg:h-[270px] xl:h-[280px] relative">
               <Swiper
                 modules={[Navigation]}
                 slidesPerView={1}
                 spaceBetween={12}
+                loop={Infinity}
                 navigation={{
                   prevEl: imgPrevRef.current,
                   nextEl: imgNextRef.current,

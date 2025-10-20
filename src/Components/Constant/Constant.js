@@ -303,7 +303,7 @@ export const exclusiveProperties = [
     wallet: "555",
   },
   {
-    img: fourthtown,
+    img: sofa,
     title: "Luxury Apartment",
     locationicon: CiLocationOn,
     location: "125 Downtown St",
@@ -315,7 +315,7 @@ export const exclusiveProperties = [
     wallet: "650",
   },
   {
-    img: fifthtown,
+    img: house,
     title: "Modern House",
     locationicon: CiLocationOn,
     location: "125 Downtown St",
