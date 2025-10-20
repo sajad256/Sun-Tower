@@ -111,7 +111,7 @@ export const trendingListings = [
     carIcon: FaCar,
     car: "2",
     rulerIcon: TbRuler2,
-    size: "1.5m",
+    size: "2m",
     phoneIcon: IoCallOutline,
     call: "Call",
     whatsappIcon: FaWhatsapp,
