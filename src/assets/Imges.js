@@ -16,6 +16,11 @@ import house from "./house.png";
 import sofa from "./sofa.png";
 import hall from "./hall.png";
 import hall1 from "./hall1.png";
+import chicago from "./chicago.png";
+import losangeles from "./los-angeles.png";
+import miami from "./miami.png";
+import florida from "./florida.png";
+import newyork from "./new-york.png";
 import footerImg from "./footer-img.png";
 
 export {
@@ -37,5 +42,10 @@ export {
   sofa,
   hall,
   hall1,
+  chicago,
+  losangeles,
+  miami,
+  florida,
+  newyork,
   footerImg,
 };

@@ -26,6 +26,11 @@ import {
   sofa,
   hall,
   hall1,
+  chicago,
+  losangeles,
+  miami,
+  florida,
+  newyork,
   footerImg,
 } from "../../assets/Imges";
 
@@ -374,5 +379,33 @@ export const PropertiesforSale_Rent = [
     call: "Call",
     whatsappIcon: FaWhatsapp,
     whatsapp: "WhatsApp",
+  },
+];
+
+export const exploreCities = [
+  {
+    img: chicago,
+    properties: "2 Properties",
+    City: "Chicago",
+  },
+  {
+    img: losangeles,
+    properties: "1 Properties",
+    City: "Los Angeles",
+  },
+  {
+    img: miami,
+    properties: "2 Properties",
+    City: "Miami",
+  },
+  {
+    img: florida,
+    properties: "3 Properties",
+    City: "Florida",
+  },
+  {
+    img: newyork,
+    properties: "4 Properties",
+    City: "New York",
   },
 ];
