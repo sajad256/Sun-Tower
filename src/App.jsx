@@ -5,6 +5,7 @@ import {
   Discoverthelastestproject,
   TrendingListing,
   Exclusiveproperties,
+  RecentPrepertiesforSaleAndRent,
 } from "./Components/index";
 
 export default function App() {
@@ -21,6 +22,9 @@ export default function App() {
       </div>
       <div>
         <Exclusiveproperties />
+      </div>
+      <div>
+        <RecentPrepertiesforSaleAndRent />
       </div>
     </>
   );

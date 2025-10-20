@@ -11,6 +11,12 @@ import thirdtown from "./third-town.png";
 import fourthtown from "./fourth-town.png";
 import fifthtown from "./fifth-town.png";
 import villa from "./villa.png";
+import cat from "./cat.png";
+import house from "./house.png";
+import sofa from "./sofa.png";
+import hall from "./hall.png";
+import hall1 from "./hall1.png";
+import footerImg from "./footer-img.png";
 
 export {
   logo,
@@ -26,4 +32,10 @@ export {
   fourthtown,
   fifthtown,
   villa,
+  cat,
+  house,
+  sofa,
+  hall,
+  hall1,
+  footerImg,
 };
