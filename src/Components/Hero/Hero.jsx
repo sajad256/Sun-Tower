@@ -11,7 +11,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Info */}
-      <div className="info pt-20 text-center mx-3 xl:mx-auto xl:max-w-[1200px] 2xl:max-w-[1400px]">
+      <div className="info pt-40 text-center mx-3 xl:mx-auto xl:max-w-[1200px] 2xl:max-w-[1400px]">
         <h1 className="text-white font-bold text-4xl md:text-5xl">
           Find Your Perfect Home here
         </h1>
@@ -25,7 +25,7 @@ export default function Hero() {
 
       {/* Filter Bar */}
       <div className="flex justify-center">
-        <div className="Main-for-All mt-10 p-3 bg-white flex items-center justify-between mx-3 rounded-full md:w-[450px] xl:w-[600px] 2xl:w-[700px]">
+        <div className="Main-for-All mt-10 p-3 bg-white flex items-center justify-between mx-3 rounded-full md:w-[400px] xl:w-[500px] 2xl:w-[600px]">
           <div className="All cursor-pointer hover:bg-[#d88946]/20 px-4 py-2 rounded-full transition-all duration-200">
             <h1 className="text-[#D88946] font-medium">All</h1>
           </div>
