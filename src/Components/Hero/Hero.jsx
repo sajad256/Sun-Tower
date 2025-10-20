@@ -4,7 +4,7 @@ import { CiSearch } from "react-icons/ci";
 
 export default function Hero() {
   return (
-    <section className="bg-[url('/hero-img.png')] bg-center bg-cover bg-black/60 bg-blend-darken h-screen">
+    <section className="bg-[url('/hero-img.png')] bg-center bg-cover bg-black/60 bg-blend-darken h-screen 2xl:h-[700px]">
       {/* Navbar */}
       <div className="pt-2">
         <Navbar />
