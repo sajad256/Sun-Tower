@@ -1,5 +1,5 @@
 import React from "react";
-import { latestProject } from "../Constant/Constant"; // adjust path if needed
+import { latestProject } from "../Constant/Constant";
 
 export default function Projects() {
   return (

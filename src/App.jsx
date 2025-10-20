@@ -8,6 +8,7 @@ import {
   RecentPrepertiesforSaleAndRent,
   ExploreCities,
   Parking,
+  Footer,
 } from "./Components/index";
 
 export default function App() {
@@ -33,6 +34,9 @@ export default function App() {
       </div>
       <div>
         <Parking />
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );

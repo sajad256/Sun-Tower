@@ -6,6 +6,7 @@ import Exclusiveproperties from "./Exclusive Properties/Exclusiveproperties";
 import RecentPrepertiesforSaleAndRent from "./Recent Properties for Sale And Rent/Preperties";
 import ExploreCities from "./Explore Cities/ExploreCities";
 import Parking from "./Own commercial parking/Parking";
+import Footer from "./Footer/Footer";
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   RecentPrepertiesforSaleAndRent,
   ExploreCities,
   Parking,
+  Footer,
 };

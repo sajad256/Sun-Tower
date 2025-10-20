@@ -7,6 +7,9 @@ import { FaWhatsapp } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { FaBed } from "react-icons/fa";
 import { GiWallet } from "react-icons/gi";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 
 import {
   logo,
@@ -21,17 +24,14 @@ import {
   fourthtown,
   fifthtown,
   villa,
-  cat,
   house,
   sofa,
   hall,
-  hall1,
   chicago,
   losangeles,
   miami,
   florida,
   newyork,
-  footerImg,
 } from "../../assets/Imges";
 
 export const navLinks = [
@@ -407,5 +407,47 @@ export const exploreCities = [
     img: newyork,
     properties: "4 Properties",
     City: "New York",
+  },
+];
+
+export const footerLinks = [
+  {
+    title: "Sun Tower",
+    email: "suntower.com",
+  },
+  // Social Icons
+  {
+    relaxtime: "Your time to relax. Our time to sparkle",
+    icon: [FaFacebook, FaInstagram, FaTiktok, FaWhatsapp],
+  },
+];
+
+export const Company = [
+  {
+    title: "COMPANY",
+    Contact: "Contact",
+    Selling: "Selling",
+    About: "About",
+    Properties: "Properties",
+  },
+];
+
+export const Services = [
+  {
+    title: "SERVICES",
+    Home: "Home",
+    Renting: "Renting",
+    Management: "Management",
+    Buying: "Buying",
+  },
+];
+
+export const Support = [
+  {
+    title: "SUPPORT",
+    FAQ: "FAQ",
+    HelpCenter: "Help Center",
+    Privacy: "Privacy Policy",
+    Terms: "Terms & Conditions",
   },
 ];
