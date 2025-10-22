@@ -37,7 +37,7 @@ export default function Navbar() {
                   }
                 >
                   <div
-                    className={`flex items-center gap-1 font-medium transition-colors ${
+                    className={`flex items-center gap-1 transition-colors ${
                       location.pathname === "/" && link.title === "Home"
                         ? "text-[#D88946]"
                         : location.pathname === `/${link.title.toLowerCase()}`
