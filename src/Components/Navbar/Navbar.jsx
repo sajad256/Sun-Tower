@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { RiMenu3Fill, RiCloseLine } from "react-icons/ri";
 import { MdArrowDropDown, MdOutlineArrowDropUp } from "react-icons/md";
 import { navLinks, navAssets } from "../Constant/Constant";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const location = useLocation(); // inside your component
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-transparent mt-3">
@@ -25,26 +27,38 @@ export default function Navbar() {
           <ul className="hidden md:flex gap-6 relative">
             {navLinks.map((link, index) => (
               <li key={index} className="relative group cursor-pointer">
-                <div
-                  className={`flex items-center gap-1 font-medium transition-colors ${
+                <Link
+                  to={
                     link.title === "Home"
-                      ? "text-[#D88946]"
-                      : "text-black hover:text-[#D88946]"
-                  }`}
+                      ? "/"
+                      : link.dropdown
+                      ? "#" // dropdown parent not clickable
+                      : `/${link.title.toLowerCase()}`
+                  }
                 >
-                  {link.title}
-                  {link.dropdown && (
-                    <MdArrowDropDown className="text-2xl mt-[2px] transition-transform duration-500 group-hover:rotate-180" />
-                  )}
-                </div>
+                  <div
+                    className={`flex items-center gap-1 font-medium transition-colors ${
+                      location.pathname === "/" && link.title === "Home"
+                        ? "text-[#D88946]"
+                        : location.pathname === `/${link.title.toLowerCase()}`
+                        ? "text-[#D88946]"
+                        : "text-black hover:text-[#D88946]"
+                    }`}
+                  >
+                    {link.title}
+                    {link.dropdown && (
+                      <MdArrowDropDown className="text-2xl mt-[2px] transition-transform duration-500 group-hover:rotate-180" />
+                    )}
+                  </div>
+                </Link>
 
-                {/* Desktop dropdown menu */}
+                {/* Dropdown menu */}
                 {link.dropdown && (
                   <ul
-                    className="absolute left-0 top-7   bg-white shadow-lg rounded-lg overflow-hidden
-                max-h-0 opacity-0 invisible
-                group-hover:opacity-100 group-hover:visible group-hover:max-h-96
-                transition-all duration-300 ease-out transform -translate-y-4 group-hover:translate-y-0 w-[300px]"
+                    className="absolute left-0 top-7 bg-white shadow-lg rounded-lg overflow-hidden
+                    max-h-0 opacity-0 invisible
+                    group-hover:opacity-100 group-hover:visible group-hover:max-h-96
+                    transition-all duration-300 ease-out transform -translate-y-4 group-hover:translate-y-0 w-[300px]"
                   >
                     {link.dropdown.map((item, i) => (
                       <li
@@ -67,7 +81,6 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-
           {/* Feedback + Mobile Toggle */}
           <div className="flex items-center gap-3">
             <div className="hidden md:flex items-center gap-1 bg-[#D88946] md:px-2 md:py-2 rounded-full">

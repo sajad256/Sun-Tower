@@ -9,35 +9,34 @@ import {
   ExploreCities,
   Parking,
   Footer,
+  Aboutpage,
 } from "./Components/index";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
-    <>
-      <div>
-        <Hero />
-      </div>
-      <div>
-        <Discoverthelastestproject />
-      </div>
-      <div>
-        <TrendingListing />
-      </div>
-      <div>
-        <Exclusiveproperties />
-      </div>
-      <div>
-        <RecentPrepertiesforSaleAndRent />
-      </div>
-      <div>
-        <ExploreCities />
-      </div>
-      <div>
-        <Parking />
-      </div>
-      <div>
-        <Footer />
-      </div>
-    </>
+    <Router>
+      <Routes>
+        {/* Home page: all sections */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <Discoverthelastestproject />
+              <TrendingListing />
+              <Exclusiveproperties />
+              <RecentPrepertiesforSaleAndRent />
+              <ExploreCities />
+              <Parking />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* About page */}
+        <Route path="/about" element={<Aboutpage />} />
+      </Routes>
+    </Router>
   );
 }

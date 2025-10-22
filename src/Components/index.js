@@ -7,6 +7,7 @@ import RecentPrepertiesforSaleAndRent from "./Recent Properties for Sale And Ren
 import ExploreCities from "./Explore Cities/ExploreCities";
 import Parking from "./Own commercial parking/Parking";
 import Footer from "./Footer/Footer";
+import Aboutpage from "./About Comp/About";
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   ExploreCities,
   Parking,
   Footer,
+  Aboutpage,
 };
