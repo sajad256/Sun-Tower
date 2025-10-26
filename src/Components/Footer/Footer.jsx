@@ -137,7 +137,7 @@ export default function Footer() {
             </span>
             <span>
               <h1>
-                DevelopBy
+                DevelopBy •
                 <a
                   className="text-purple-950 font-bold cursor-pointer"
                   href="https://www.linkedin.com/feed/"
